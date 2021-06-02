@@ -1,25 +1,40 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <LangVersion>9</LangVersion>
-    <NoWarn>$(NoWarn);IDE0057</NoWarn>
+    <NoWarn>$(NoWarn);IDE0057;RS2008;CA2249</NoWarn>
     <Nullable>enable</Nullable>
-    <GeneratePackageOnBuild Condition="'$(Configuration)' == 'Release'">true</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild Condition="'$(Configuration)' == 'Release'">false</GeneratePackageOnBuild>
     <PackageId>StandaloneSourceExpander</PackageId>
     <Description>A library that expanding embedded source code.</Description>
+    <RootNamespace>SourceExpander</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Include="..\SourceExpander.Share\Embedded.*\*.cs" />
+    <Compile Include="..\SourceExpander.Generator\Diagnostics*\*.cs" />
     <Compile Include="..\SourceExpander.Generator\CompilationExpander.cs" />
+    <Compile Include="..\SourceExpander.Generator\AssemblyUtil.cs" />
+    <Compile Include="..\SourceExpander.Generator\EmbeddedLoader.cs" />
     <Compile Include="..\SourceExpander.Generator\ExpandConfig.cs" />
   </ItemGroup>
 
   <ItemGroup>
+
+    <PackageReference Include="Microsoft.Build.Locator" Version="1.4.1" />
+    <PackageReference Include="Microsoft.Build.Tasks.Core" Version="16.10.0" ExcludeAssets="runtime" />
+    <PackageReference Include="Microsoft.Build.Framework" Version="16.10.0" ExcludeAssets="runtime" />
+    <PackageReference Include="Microsoft.Build" Version="16.10.0" ExcludeAssets="runtime" />
+    <PackageReference Include="Microsoft.Build.Utilities.Core" Version="16.10.0" ExcludeAssets="runtime" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Workspaces.MSBuild" Version="3.9.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="3.9.0" />
+
+    <PackageReference Include="NuGet.Versioning" Version="5.9.1" />
+    <PackageReference Include="NuGet.ProjectModel" Version="5.9.1" />
+
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Base32768" Version="1.0.9" />
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="3.9.0" />
   </ItemGroup>
 
   <ItemGroup>

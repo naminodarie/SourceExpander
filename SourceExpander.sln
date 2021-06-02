@@ -47,6 +47,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleApp", "Source\Sandbox
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StandaloneSourceExpander", "Source\StandaloneSourceExpander\StandaloneSourceExpander.csproj", "{9AAFD3ED-6979-44C7-A19C-544B1C23BF20}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StandaloneSourceExpander.Test", "Test\StandaloneSourceExpander.Test\StandaloneSourceExpander.Test.csproj", "{00BF2FC5-3D89-471B-B283-12E332E3754C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,10 @@ Global
 		{9AAFD3ED-6979-44C7-A19C-544B1C23BF20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9AAFD3ED-6979-44C7-A19C-544B1C23BF20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9AAFD3ED-6979-44C7-A19C-544B1C23BF20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00BF2FC5-3D89-471B-B283-12E332E3754C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00BF2FC5-3D89-471B-B283-12E332E3754C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00BF2FC5-3D89-471B-B283-12E332E3754C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00BF2FC5-3D89-471B-B283-12E332E3754C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -131,6 +137,7 @@ Global
 		{30E3E2D4-7572-473E-BB77-386A790DA9BD} = {6B72F2B4-0B21-47D6-A747-B7C6CB4C4195}
 		{B2F7D7DF-6D25-49C5-B612-7F474FD3CCC7} = {6B72F2B4-0B21-47D6-A747-B7C6CB4C4195}
 		{B60A8E45-B63D-41D3-9B49-5B946E14A79B} = {6B72F2B4-0B21-47D6-A747-B7C6CB4C4195}
+		{00BF2FC5-3D89-471B-B283-12E332E3754C} = {4D491FE6-63FF-4D17-A6ED-F6ACB0B23214}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FF4EF7E5-692E-49A6-94AF-5B5B11FEF356}
